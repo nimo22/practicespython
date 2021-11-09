@@ -1,0 +1,42 @@
+{% extends "unique.html" %}
+{% block head %}
+    {% if title:%}
+    <title>{{ title}}</title>
+    {%else:%}}
+    <title>NOTITLEFOUND</title>
+    {%endif%}
+{%  endblock head %}
+{%  block content %}
+    <table class="table table-striped table-dark">
+    <thead>
+    <tr>
+        {% set r={"bool":true}%}
+         {% for x in arr %}
+             {% if r.bool %}
+                 {{r}}
+                 {% for z in x.keys(): %}
+                     <th scope="col">{{z}}</th>
+                 {% endfor %}
+                {# {% set r.update({"bool":false})%} #}
+               {% if r.update({'bool': False})%} {% endif %}
+             {% endif %}
+         {% endfor %}
+
+    </tr>
+    </tr>
+    </thead>
+        <tbody>
+
+        {% for x in arr : %}
+        <tr>
+            {% for y,z in x.items() %}
+
+              <td> {{ z }}</td>
+
+             {% endfor %}
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+<a class="btn btn-primary" href="/form" role="button">Link</a>
+{%  endblock content %}

@@ -1,0 +1,32 @@
+{% extends "unique.html" %}
+{% block head %}
+    {% if title:%}
+    <title>{{ title}}</title>
+    {%else:%}
+    <title>NOTITLEFOUND</title>
+    {%endif%}
+    <script type=text/javascript defer src="{{
+  url_for('static', filename='js/script.js') }}"></script>
+{%  endblock head %}
+{% block content %}
+<body>
+<h2 style=" text-align: center">loggin</h2>
+<div style="margin: auto ; width: 50% ; border: 3px solid white ;padding: 10px "  >
+
+ <form id="formme" method="post">
+  <div class="form-group ">
+      <div id="errormail"></div>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="text" name="exampleInputEmail1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+      <div id="errorpass"></div>
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1"  name="exampleInputPassword1" placeholder="Password">
+  </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</div>
+</body>
+{% endblock content %}

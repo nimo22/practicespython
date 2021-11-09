@@ -1,0 +1,11 @@
+{%extends "temp.html"%}
+{%block head%}
+{% if title is none %}
+  <title>titre invalid</title>
+{% else %}
+<title>{{title}}</title>
+{%endif%}
+{% endblock head%}
+{%block body%}
+<p>hello {%f"{name}%}</p>
+{%endblock body%}

@@ -1,0 +1,12 @@
+{% extends "unique.html" %}
+{% block head %}
+    {% if title:%}
+    <title>{{ title}}</title>
+    {%else:%}
+    <title>NOTITLEFOUND</title>
+    {%endif%}
+{%  endblock head %}
+
+{%block content %}
+{{user}}
+{%endblock content %}

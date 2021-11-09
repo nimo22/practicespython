@@ -1,0 +1,13 @@
+{%extends "temp.html"%}
+{%block head%}
+{% if title is none %}
+  <title>titre invalid</title>
+{% else %}
+<title>{{title}}</title>
+{%endif%}
+{% endblock head%}
+
+{%block body%}
+
+<a href="{{ url_for('user', user='John doe') }}">click me </a>
+{%endblock body%}

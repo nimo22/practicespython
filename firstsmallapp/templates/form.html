@@ -1,0 +1,34 @@
+{%extends "main.html"%}
+{%block head %}
+<script type=text/javascript defer src="{{
+  url_for('static', filename='js/check.js') }}"></script>
+{%if titre is not none:%}
+    <title>{{titre}}</title>
+{%else:%}
+<title>{{notitlefound}}</title>
+{%endif%}
+{%endblock head%}
+{%block body%}
+<div style="text-align: center">
+      <p1 style="text-align: center;font-size: 50px"  >register</p1>
+</div>
+<form id="from">
+<div id="errormail"></div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div id="errorpass"></div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="text" class="form-control" id="password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="password">reecrire votre mots de pass</label>
+    <input type="text" class="form-control" id="password2" placeholder="Password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{%endblock body%}

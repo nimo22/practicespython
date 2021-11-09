@@ -1,0 +1,18 @@
+{%extends "main.html"%}
+{%block head %}
+{%if titre is not none:%}
+    <title>{{titre}}</title>
+{%else:%}
+<title>{{notitlefound}}</title>
+{%endif%}
+{%endblock head%}
+{%block body%}
+<div style="text-align: center">
+      <p1 style="text-align: center;font-size: 50px"  >welcome</p1>  <!-- todo read cookie to insert client name -->
+</div>
+<div>
+<a href="{{url_for('exist')}}" style="float:left;margin-right:5px" type="button" class="btn btn-primary">existing customer</a>
+    <a href="{{url_for('dontExist')}}" style="float:right;margin-right:5px;"type="button" class="btn btn-primary">new customer</a>
+</div>
+
+{%endblock body%}

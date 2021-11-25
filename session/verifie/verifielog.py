@@ -12,7 +12,9 @@ class Ver:
 
     def ver_username_pass(self, cur, user, pas):
         a = False
+        print(cur[0][1])
         for y in cur:
+            print(user)
 
             if user in y[0] and pas in y[1]:
                 a = True
